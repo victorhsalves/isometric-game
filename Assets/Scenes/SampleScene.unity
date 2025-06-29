@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 361967534}
   - component: {fileID: 361967533}
   - component: {fileID: 361967537}
-  - component: {fileID: 361967536}
   m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
@@ -219,24 +218,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &361967536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361967532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29abac419d5b7874b94d98b0429816a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrain: {fileID: 361967534}
-  cellPrefab: {fileID: 5920052655385788133, guid: 244f958b0dcc49f48ad39af98cb1bd6c, type: 3}
-  cellMaterial: {fileID: 2100000, guid: 13248f7c24b9ca44c8071af506c2adca, type: 2}
-  previewMaterial: {fileID: 2100000, guid: cb82a85de4498124999baaab7ed95f43, type: 2}
-  cellColor: {r: 1, g: 1, b: 1, a: 1}
-  cellHeight: 0.1
 --- !u!156049354 &361967537
 Grid:
   m_ObjectHideFlags: 0
@@ -340,13 +321,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.27059805, y: -0.27059805, z: 0.6532815, w: 0.6532815}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 90}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,6 +400,126 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1806803305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1806803307}
+  - component: {fileID: 1806803306}
+  - component: {fileID: 1806803309}
+  - component: {fileID: 1806803308}
+  m_Layer: 0
+  m_Name: TerrainController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1806803306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806803305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29abac419d5b7874b94d98b0429816a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 361967534}
+  cellPrefab: {fileID: 5920052655385788133, guid: 244f958b0dcc49f48ad39af98cb1bd6c, type: 3}
+  cellMaterial: {fileID: 2100000, guid: 13248f7c24b9ca44c8071af506c2adca, type: 2}
+  previewMaterial: {fileID: 2100000, guid: cb82a85de4498124999baaab7ed95f43, type: 2}
+  cellColor: {r: 1, g: 1, b: 1, a: 1}
+  cellHeight: 0.1
+  enableDebugLogs: 0
+--- !u!4 &1806803307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806803305}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1806803308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806803305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2098936df912d764cabe9c1afea35054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainController: {fileID: 1806803306}
+  showGridOnStart: 0
+  toggleKey: 98
+  gridColor: {r: 1, g: 1, b: 1, a: 1}
+  gridOpacity: 0.3
+  cellHeight: 0.1
+  enableDebugMode: 0
+--- !u!114 &1806803309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806803305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375f29769573e8a4db6e5cc2acae119f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainController: {fileID: 1806803306}
+  enableDebugMode: 1
+  showRaycastInfo: 1
+  raycastLine: {fileID: 0}
+  raycastDistance: 100
+--- !u!1 &1892422804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1892422805}
+  m_Layer: 0
+  m_Name: BuldingController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1892422805
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892422804}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1043509786918726334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -470,6 +571,10 @@ PrefabInstance:
     - target: {fileID: 3659110750965067159, guid: 17d03cd57549a974c9f439de0532ea1f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5262603142071135305, guid: 17d03cd57549a974c9f439de0532ea1f, type: 3}
+      propertyPath: m_Mass
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -546,3 +651,5 @@ SceneRoots:
   - {fileID: 361967535}
   - {fileID: 8806243179117691707}
   - {fileID: 1043509786918726334}
+  - {fileID: 1806803307}
+  - {fileID: 1892422805}
